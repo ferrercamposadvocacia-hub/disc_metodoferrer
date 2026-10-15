@@ -67,6 +67,7 @@
   .user-chip{font-size:13px; color:var(--ink-soft); font-weight:500;}
   .user-chip b{color:var(--ink); font-weight:700;}
   .btn-logout{font-size:12.5px; font-weight:700; color:var(--maroon-soft); background:none; text-decoration:underline; text-underline-offset:3px;}
+  @media (max-width:640px){.topbar{flex-wrap:wrap; gap:10px; padding:12px 16px;} .nav-tabs{order:3; width:100%; overflow-x:auto;} .nav-tab{padding:8px 12px; white-space:nowrap;} .user-chip{display:none;}}
 
   /* ---------- Buttons ---------- */
   .btn{
@@ -134,7 +135,8 @@
   }
 
   /* ---------- Page shell ---------- */
-  .page{padding:38px 0 70px;}
+  .page{padding-top:38px; padding-bottom:70px;}
+  @media (max-width:640px){.container{padding:0 16px;} .page{padding-top:24px;}}
   .page-head{display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:28px; flex-wrap:wrap; gap:14px;}
   .page-head h1{font-family:var(--font-display); font-size:30px; color:var(--maroon-deep);}
   .page-head p{font-size:14px; color:var(--ink-soft); margin-top:4px;}
@@ -305,6 +307,57 @@
   .radar-legend{display:flex; gap:16px; margin-top:16px; flex-wrap:wrap; justify-content:center;}
   .radar-legend-item{display:flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:var(--ink-soft);}
   .radar-legend-dot{width:9px; height:9px; border-radius:3px;}
+  .report-hero{border-top:4px solid var(--maroon-deep);}
+  .archetype-name{font-size:24px !important; margin-bottom:10px !important;}
+  .kpi-row{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px;}
+  @media (max-width:760px){.kpi-row{grid-template-columns:repeat(2,1fr);}}
+  .kpi{background:var(--cream); border-radius:12px; padding:12px 14px;}
+  .kpi-lbl{font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); font-weight:700; margin-bottom:4px;}
+  .kpi-val{font-size:14px; font-weight:800; color:var(--ink);}
+  .kpi-tag{font-size:11px; font-weight:700; color:var(--ink-soft);}
+  .section-intro{font-size:12.5px !important; color:var(--ink-soft) !important; margin-bottom:14px;}
+  .factor-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media (max-width:760px){.factor-grid{grid-template-columns:1fr;}}
+  .factor-item{border-left:4px solid; background:#FCFAF5; border-radius:10px; padding:14px 16px;}
+  .factor-head{display:flex; align-items:center; gap:6px; margin-bottom:6px; flex-wrap:wrap;}
+  .factor-item p{font-size:13px !important; line-height:1.6 !important;}
+  .factor-gap{color:var(--ink-soft) !important; font-style:italic; margin-top:6px !important;}
+  .factor-gap.muted{opacity:.8;}
+  .lvl-pill{margin-left:auto; font-size:11px; font-weight:800; padding:3px 10px; border-radius:99px;}
+  .lvl-alto{background:#F3E1E3; color:#7A1F2B;} .lvl-moderado{background:#F3EEDF; color:#7A6420;} .lvl-baixo{background:#E6EDF2; color:#33475B;}
+  .reco-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px 24px;}
+  @media (max-width:760px){.reco-grid{grid-template-columns:1fr;}}
+  .reco p{font-size:13.5px !important;}
+  .pdi-table-wrap{overflow-x:auto;}
+  .pdi-table{width:100%; border-collapse:collapse; font-size:13px; min-width:560px;}
+  .pdi-table th{font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); text-align:left; padding:0 10px 10px; border-bottom:1px solid #E5DBC6;}
+  .pdi-table td{padding:12px 10px; border-bottom:1px solid #F0E8D8; vertical-align:top; line-height:1.5;}
+  .pdi-table .nowrap{white-space:nowrap; font-weight:700;}
+  @media (max-width:640px){.pdi-table{min-width:0;} .pdi-table thead{display:none;} .pdi-table tr{display:grid; grid-template-columns:36px 1fr; gap:4px 10px; padding:12px 0; border-bottom:1px solid #F0E8D8;} .pdi-table td{padding:0; border:none;} .pdi-table td:first-child{grid-row:span 4;} .pdi-table td:nth-child(3)::before{content:'Ação: '; font-weight:700;} .pdi-table td:nth-child(4)::before{content:'Prazo: ';} .pdi-table td:nth-child(5)::before{content:'Como medir: '; font-weight:700;}}
+  .method-note{background:#FCFAF5;}
+  .method-note p{font-size:12.5px !important; color:var(--ink-soft) !important;}
+  .radar-card-lg{align-items:stretch; text-align:left; margin-bottom:26px;}
+  .radar-sub{font-size:12.5px; color:var(--ink-soft); margin:0 0 10px;}
+  .radar-layout{display:grid; grid-template-columns:1fr; gap:22px; align-items:center;}
+  @media (max-width:900px){.radar-layout{grid-template-columns:1fr;}}
+  .radar-chart-wrap{display:flex; flex-direction:column; align-items:center;}
+  .radar-svg{width:100%; max-width:560px; height:auto; display:block; overflow:visible;}
+  .radar-svg g{cursor:default;}
+  .radar-legend-line{width:22px; height:0; border-top:3px solid; display:inline-block;}
+  .radar-legend-line.dashed{border-top-style:dashed;}
+  .radar-detail{width:100%; border-collapse:collapse; font-size:13px;}
+  .radar-detail th{font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); text-align:left; padding:0 8px 10px; border-bottom:1px solid #E5DBC6;}
+  .radar-detail td{padding:12px 8px; border-bottom:1px solid #F0E8D8; vertical-align:middle;}
+  .radar-detail .rd-num{font-weight:800; white-space:nowrap; text-align:right;}
+  .radar-detail th:nth-child(n+3){text-align:right;}
+  .rd-rank{font-weight:800; color:var(--ink-soft); font-size:12px;}
+  .rd-badge{display:inline-grid; place-items:center; width:24px; height:24px; border-radius:6px; color:#fff; font-weight:900; font-size:12px; margin-right:8px; vertical-align:middle;}
+  .rd-name{font-weight:800; vertical-align:middle;}
+  .rd-level{font-size:11px; color:var(--ink-soft); margin:3px 0 0 32px;}
+  .rd-mini{height:4px; background:var(--cream); border-radius:4px; margin-top:5px; overflow:hidden; min-width:56px;}
+  .rd-mini span{display:block; height:100%; border-radius:4px;}
+  .rd-note{font-size:11.5px; color:var(--ink-soft); margin-top:14px; line-height:1.5;}
+  @media (max-width:560px){.radar-detail{font-size:12px;} .radar-detail td,.radar-detail th{padding-left:3px; padding-right:3px;} .rd-level{display:none;} .rd-badge{margin-right:4px;} .radar-detail td:first-child,.radar-detail th:first-child{display:none;} .rd-mini{min-width:40px;}}
 
   .risk-pill{display:inline-flex; padding:5px 14px; border-radius:999px; font-size:12px; font-weight:800; letter-spacing:.02em; margin-bottom:10px;}
   .risk-baixo{background:#E3F2E5; color:#2C6B34;}
@@ -514,9 +567,10 @@ function computeRoleFit(scores){
 }
 
 function roleLabel(pct){
-  if(pct>=80) return {text:'Excelente', cls:'qual-excelente'};
-  if(pct>=65) return {text:'Muito bom', cls:'qual-muitobom'};
-  if(pct>=50) return {text:'Bom', cls:'qual-bom'};
+  // Como os fatores DISC somam 100%, a aderência ponderada fica tipicamente entre 15% e 45%
+  if(pct>=35) return {text:'Excelente', cls:'qual-excelente'};
+  if(pct>=30) return {text:'Muito bom', cls:'qual-muitobom'};
+  if(pct>=25) return {text:'Bom', cls:'qual-bom'};
   return {text:'Regular', cls:'qual-regular'};
 }
 
@@ -574,57 +628,215 @@ const DESVANTAGENS = {
 };
 function uniq(arr){ return [...new Set(arr)]; }
 
-function buildGapAnalysis(natural, adaptado, name){
-  const first = (name||'').split(' ')[0] || 'A pessoa avaliada';
-  const diffs = ['D','I','S','C'].map(k=>({k, diff: Math.round((adaptado[k]-natural[k])*10)/10}));
-  diffs.sort((a,b)=>Math.abs(b.diff)-Math.abs(a.diff));
-  const top = diffs[0];
-  if(Math.abs(top.diff) < 5){
-    return `O comportamento de ${first} no ambiente de trabalho é bastante semelhante ao seu jeito natural, com poucas adaptações relevantes entre os dois perfis.`;
-  }
-  const dir = top.diff>0 ? 'aumenta' : 'diminui';
-  const nome = PROFILE_INFO[top.k].name.toLowerCase();
-  return `No ambiente de trabalho, a tendência de ${first} a ${nome} ${dir} em relação ao comportamento natural (${natural[top.k]}% → ${adaptado[top.k]}%), sugerindo uma adaptação consciente às exigências do dia a dia profissional.`;
-}
+/* ============ Relatório contextualizado: bibliotecas de texto ============ */
+const ADAPT_COLOR = '#2B7BD6';
+function firstName(n){ return ((n||'').trim().split(/\s+/)[0]) || 'A pessoa avaliada'; }
+function factorLevel(v){ return v>=33 ? 'alto' : (v>=18 ? 'moderado' : 'baixo'); }
+const LEVEL_LABEL = {alto:'Alto', moderado:'Moderado', baixo:'Baixo'};
+const OPPOSITE = {D:'S', S:'D', I:'C', C:'I'};
 
+// Arquétipos para a combinação fator predominante + secundário
+const COMBOS = {
+  DI:{nome:'Realizador Persuasivo', texto:'Une a vontade de vencer à capacidade de mobilizar pessoas. Costuma assumir a frente das conversas, convence pelo entusiasmo e transforma metas em movimento.', comercial:'No comercial, rende muito em abertura de portas e negociação, desde que tenha alguém ou algum processo garantindo o follow-up e os detalhes.'},
+  DS:{nome:'Executor Determinado', texto:'Combina foco em resultado com persistência e constância. É firme nas metas, mas tende a sustentar o ritmo ao longo do tempo, sem picos e quedas bruscas.', comercial:'No comercial, entrega bem em carteiras que exigem disciplina de execução e cobrança contínua, com menor necessidade de exposição social.'},
+  DC:{nome:'Estrategista Exigente', texto:'Alia decisão rápida a um alto padrão de qualidade. Questiona, mede e cobra, buscando resultado com método e embasamento.', comercial:'No comercial, destaca-se em vendas complexas, gestão de indicadores e negociações em que dados e firmeza precisam andar juntos.'},
+  ID:{nome:'Influenciador Dinâmico', texto:'Lidera pelo carisma e pela energia. Cria conexão com facilidade e usa essa conexão para levar as pessoas à ação, com um toque de competitividade.', comercial:'No comercial, é forte em apresentações, eventos, networking e fechamento, especialmente quando a venda depende de relacionamento e confiança rápida.'},
+  IS:{nome:'Conector Acolhedor', texto:'É caloroso, próximo e paciente. Gosta de gente, escuta com interesse e cria vínculos duradouros, preferindo harmonia a confronto.', comercial:'No comercial, tem grande valor em relacionamento, pós-venda, indicação e retenção — pode precisar de apoio para conduzir negociações duras.'},
+  IC:{nome:'Comunicador Criterioso', texto:'Equilibra simpatia com cuidado técnico. Consegue explicar temas complexos de forma acessível, sem abrir mão da precisão.', comercial:'No comercial, é muito útil em vendas consultivas e pré-vendas, em que é preciso traduzir informação técnica em valor percebido pelo cliente.'},
+  SD:{nome:'Realizador Constante', texto:'Trabalha com serenidade, mas não perde de vista o resultado. É confiável, cumpre o que promete e se posiciona com firmeza quando necessário.', comercial:'No comercial, é sólido em gestão de carteira e contas recorrentes, em que consistência e entrega no prazo fazem diferença.'},
+  SI:{nome:'Apoiador Cordial', texto:'É gentil, colaborativo e atento às pessoas. Cria um ambiente de confiança e costuma ser a referência de apoio dentro do time.', comercial:'No comercial, brilha no atendimento, onboarding e Customer Success, onde paciência e empatia aumentam a satisfação e a renovação.'},
+  SC:{nome:'Especialista Confiável', texto:'Combina estabilidade com rigor. Prefere processos claros, faz as coisas do jeito certo e oferece previsibilidade a quem depende do seu trabalho.', comercial:'No comercial, é valioso em operações, backoffice comercial, qualificação estruturada e pós-venda técnico.'},
+  CD:{nome:'Analista Decidido', texto:'Pensa antes de agir, mas age com convicção quando tem os dados. Tem senso crítico apurado e pouca tolerância a improviso sem fundamento.', comercial:'No comercial, encaixa-se bem em gestão, inteligência comercial e vendas técnicas, em que análise e decisão precisam se complementar.'},
+  CI:{nome:'Consultor Técnico', texto:'Domina o conteúdo e sabe compartilhá-lo. Une profundidade técnica a uma comunicação cordial, gerando credibilidade.', comercial:'No comercial, é forte em diagnóstico, apresentação de soluções técnicas e suporte especializado ao time de vendas.'},
+  CS:{nome:'Planejador Meticuloso', texto:'Organizado, paciente e detalhista. Constrói processos, documenta, revisa e evita riscos desnecessários.', comercial:'No comercial, rende melhor em LDR, inteligência de dados, contratos e operações, com menos exposição a pressão de fechamento imediato.'}
+};
+
+// Leitura de cada fator conforme a intensidade no perfil natural
+const FACTOR_READ = {
+  D:{alto:'Busca controle, ritmo e resultado. Assume riscos, decide rápido e se incomoda com lentidão ou indecisão ao redor.',
+     moderado:'Sabe se posicionar e cobrar quando a situação pede, sem precisar disputar espaço o tempo todo.',
+     baixo:'Prefere cooperar a competir. Evita confronto direto e pode hesitar em impor sua opinião ou pressionar por decisões.'},
+  I:{alto:'Precisa de interação e reconhecimento. Comunica-se com facilidade, influencia pelo entusiasmo e se energiza com pessoas.',
+     moderado:'Transita bem entre o social e o foco individual; é cordial sem depender de exposição constante.',
+     baixo:'É mais reservado e objetivo. Prefere fatos a conversas longas e pode parecer distante para quem espera calor social.'},
+  S:{alto:'Valoriza estabilidade, rotina e lealdade. É paciente e confiável, mas sente o impacto de mudanças bruscas.',
+     moderado:'Mantém constância sem resistir a mudanças; adapta-se quando entende o motivo.',
+     baixo:'Gosta de variedade e movimento. Tolera bem mudanças, mas pode ter menos paciência com rotinas e processos longos.'},
+  C:{alto:'Orienta-se por qualidade, regras e precisão. Analisa antes de agir e tem alto padrão de exigência consigo e com os outros.',
+     moderado:'Cuida dos detalhes importantes sem se prender a eles; segue processos sem rigidez excessiva.',
+     baixo:'É mais flexível com regras e detalhes. Ganha agilidade, mas pode deixar passar inconsistências e etapas formais.'}
+};
+// Significado do aumento/diminuição de cada fator no perfil adaptado
+const GAP_MEANING = {
+  D:{up:'o ambiente pede mais firmeza, iniciativa e velocidade de decisão do que o natural',
+     down:'o ambiente pede contenção da assertividade — mais escuta e menos imposição'},
+  I:{up:'o ambiente exige mais exposição, comunicação e influência sobre pessoas',
+     down:'o ambiente pede mais foco individual e menos interação social'},
+  S:{up:'o ambiente pede mais paciência, constância e suporte aos outros',
+     down:'o ambiente exige mais agilidade e tolerância a mudanças do que o natural'},
+  C:{up:'o ambiente cobra mais precisão, regras e controle de qualidade',
+     down:'o ambiente pede mais flexibilidade e menos apego a procedimentos'}
+};
+// Como se comunicar com a pessoa (fator predominante)
+const COMUNICAR = {
+  D:{fazer:['Ir direto ao ponto e começar pelo resultado esperado.','Oferecer opções e deixar a decisão com a pessoa.','Combinar metas claras e prazos objetivos.'],
+     evitar:['Rodeios, conversas longas sem objetivo.','Microgerenciar ou retirar autonomia sem explicação.','Discordar em público de forma pessoal — prefira argumentos de resultado.']},
+  I:{fazer:['Abrir espaço para conversa e ouvir as ideias.','Reconhecer conquistas de forma visível.','Registrar por escrito os combinados, de forma leve.'],
+     evitar:['Excesso de frieza ou formalidade.','Críticas públicas, que afetam muito a motivação.','Despejar detalhes técnicos sem conectar com pessoas e propósito.']},
+  S:{fazer:['Explicar o porquê das mudanças com antecedência.','Mostrar o passo a passo e oferecer apoio.','Dar tempo para pensar antes de pedir uma resposta.'],
+     evitar:['Mudanças de última hora sem contexto.','Pressão por decisões imediatas.','Conflitos abertos e tom agressivo.']},
+  C:{fazer:['Trazer dados, critérios e exemplos concretos.','Responder perguntas com precisão.','Definir padrões de qualidade e expectativas por escrito.'],
+     evitar:['Informações vagas ou incoerentes.','Cobranças sem critério ou baseadas em impressão.','Apelos emocionais no lugar de argumentos.']}
+};
+// Ambiente em que a pessoa tende a render mais
+const AMBIENTE = {
+  D:['Metas desafiadoras e mensuráveis','Autonomia para decidir','Ritmo acelerado e pouca burocracia'],
+  I:['Interação frequente com pessoas','Reconhecimento e visibilidade','Variedade de tarefas e liberdade criativa'],
+  S:['Processos estáveis e previsíveis','Clima de cooperação e confiança','Tempo para se adaptar às mudanças'],
+  C:['Critérios e processos bem definidos','Acesso a dados e informações completas','Tempo para análise e foco na qualidade']
+};
+// O que ajuda a reequilibrar sob pressão
+const REEQUILIBRIO = {
+  D:'Ajuda oferecer alguma margem de controle sobre a solução e conversar sobre prioridades objetivas, em vez de multiplicar cobranças.',
+  I:'Ajuda uma conversa próxima para reorganizar prioridades, transformar o caos em uma lista curta e reforçar que a relação está preservada.',
+  S:'Ajuda antecipar o que vai mudar, explicar o motivo e oferecer apoio concreto; um espaço seguro para expor preocupações é decisivo.',
+  C:'Ajuda definir o "suficientemente bom", fornecer as informações que faltam e separar o que é crítico do que é detalhe.'
+};
+// Ponto de atenção ligado ao fator menos expressivo
+const PONTO_CEGO = {
+  D:'Com Dominância pouco expressiva, pode evitar confrontos necessários, demorar a se posicionar e deixar que outros definam o ritmo. Em situações de negociação dura, vale preparar argumentos e limites antecipadamente.',
+  I:'Com Influência pouco expressiva, pode subestimar o peso do relacionamento e parecer distante. Pequenos gestos de proximidade — perguntar, reconhecer, celebrar — ampliam muito sua capacidade de influência.',
+  S:'Com Estabilidade pouco expressiva, pode perder a paciência com rotinas e com pessoas mais lentas, e tende a iniciar mais do que concluir. Disciplina de acompanhamento e follow-up é o principal ponto de atenção.',
+  C:'Com Conformidade pouco expressiva, pode negligenciar detalhes, registros e etapas formais. Checklists simples e revisão antes de enviar propostas ou contratos evitam retrabalho.'
+};
+// Recomendações para o gestor
+const GESTOR = {
+  D:{feedback:'Direto, objetivo e focado em resultado; mostre o impacto do comportamento nas metas.', reconhecimento:'Novos desafios, autonomia e reconhecimento pelos resultados.', delegacao:'Delegue o "o quê" e o prazo, deixando o "como" com a pessoa.'},
+  I:{feedback:'Em conversa individual, começando pelo que vai bem; combine próximos passos por escrito.', reconhecimento:'Reconhecimento público, visibilidade e participação em decisões do time.', delegacao:'Delegue com acompanhamentos curtos e frequentes para garantir constância.'},
+  S:{feedback:'Em ambiente reservado, com calma e exemplos concretos; reforce a confiança.', reconhecimento:'Agradecimento sincero, estabilidade e valorização da lealdade.', delegacao:'Delegue com instruções claras, prazos realistas e abertura para dúvidas.'},
+  C:{feedback:'Baseado em fatos e critérios objetivos, com tempo para a pessoa analisar.', reconhecimento:'Valorização da qualidade e da precisão do trabalho entregue.', delegacao:'Delegue com padrões de qualidade definidos e acesso às informações necessárias.'}
+};
+const ATRITO_GESTAO = {D:'gestão muito controladora ou lenta para decidir', I:'gestão fria, distante ou excessivamente burocrática', S:'gestão que muda prioridades sem aviso ou pressiona de forma agressiva', C:'gestão que decide sem critério ou cobra velocidade sem informação suficiente'};
+const EQUIPE = {
+  D:'Complementa-se com colegas de perfil Estabilidade e Conformidade, que trazem paciência, método e atenção aos detalhes. Com outros perfis dominantes, convém definir papéis claros para evitar disputa de espaço.',
+  I:'Complementa-se com colegas de perfil Conformidade e Estabilidade, que garantem organização e continuidade. Com perfis muito analíticos, vale combinar o equilíbrio entre conversa e dados.',
+  S:'Complementa-se com colegas de perfil Dominância e Influência, que trazem ritmo, iniciativa e exposição. Com perfis muito dominantes, pode se calar — vale garantir espaço para que exponha opiniões.',
+  C:'Complementa-se com colegas de perfil Influência e Dominância, que trazem energia comercial e velocidade de decisão. Com perfis muito expansivos, vale combinar registros e critérios desde o início.'
+};
+// PDI: biblioteca de ações por fator
+const PDI_ALTO = {
+  D:{foco:'Escuta ativa e paciência', acao:'Em cada reunião com cliente ou colega, fazer ao menos 3 perguntas abertas antes de propor solução.', indicador:'Feedback do gestor e de 2 colegas sobre a qualidade da escuta.'},
+  I:{foco:'Disciplina de follow-up', acao:'Registrar todas as oportunidades no CRM no mesmo dia e revisar a agenda de follow-ups toda manhã.', indicador:'% de oportunidades com próximo passo registrado (meta ≥ 90%).'},
+  S:{foco:'Assertividade e adaptação a mudanças', acao:'Posicionar-se em pelo menos uma decisão por semana e propor uma melhoria de processo por mês.', indicador:'Número de posicionamentos/propostas apresentadas no período.'},
+  C:{foco:'Agilidade decisória', acao:'Definir prazo máximo de análise para decisões simples (ex.: 24h) e decidir com 80% das informações.', indicador:'Tempo médio de resposta a propostas e solicitações.'}
+};
+const PDI_BAIXO = {
+  D:{foco:'Posicionamento e negociação', acao:'Preparar previamente limites e argumentos de negociação; praticar role-play de objeções com o gestor.', indicador:'Taxa de conversão e desconto médio concedido.'},
+  I:{foco:'Construção de relacionamento', acao:'Reservar tempo para conversas de conexão com clientes-chave e reconhecer colegas publicamente.', indicador:'NPS/feedback de clientes e engajamento em reuniões.'},
+  S:{foco:'Constância e conclusão', acao:'Usar quadro de tarefas com no máximo 3 frentes simultâneas e concluir antes de iniciar novas.', indicador:'% de tarefas concluídas no prazo.'},
+  C:{foco:'Organização e precisão', acao:'Adotar checklist de revisão antes de enviar propostas, contratos e relatórios.', indicador:'Número de retrabalhos ou correções apontadas.'}
+};
+
+/* ============ Relatório: motor de texto (fallback determinístico, contextualizado) ============ */
+function computeAdaptation(natural, adaptado){
+  const diffs = ['D','I','S','C'].map(k=>({k, n:natural[k], a:adaptado[k], diff: Math.round((adaptado[k]-natural[k])*10)/10}));
+  const indice = Math.round(diffs.reduce((s,d)=>s+Math.abs(d.diff),0)/2*10)/10;
+  const nivel = indice<10 ? 'Baixa' : (indice<20 ? 'Moderada' : 'Alta');
+  return {diffs, indice, nivel};
+}
+function buildGapAnalysis(natural, adaptado, name){
+  const first = firstName(name);
+  const {diffs, indice, nivel} = computeAdaptation(natural, adaptado);
+  const sig = diffs.filter(d=>Math.abs(d.diff)>=5).sort((a,b)=>Math.abs(b.diff)-Math.abs(a.diff));
+  let txt = `O índice de adaptação de ${first} é de ${indice} p.p. (adaptação ${nivel.toLowerCase()}). `;
+  if(nivel==='Baixa') txt += 'Seu comportamento no trabalho é muito próximo do jeito natural, o que indica baixo gasto de energia adaptativa e boa sintonia com o ambiente atual.';
+  else if(nivel==='Moderada') txt += 'Há ajustes relevantes entre o jeito natural e o comportamento no trabalho — esforço sustentável, mas que merece atenção em períodos de maior pressão.';
+  else txt += 'O comportamento no trabalho se distancia bastante do natural, o que exige esforço adaptativo significativo e pode gerar desgaste a médio prazo se não houver alinhamento de função e ambiente.';
+  if(sig.length){
+    txt += ' Principais ajustes: ' + sig.map(d=>`${PROFILE_INFO[d.k].name} ${d.diff>0?'sobe':'cai'} de ${d.n}% para ${d.a}%, sinalizando que ${GAP_MEANING[d.k][d.diff>0?'up':'down']}`).join('; ') + '.';
+  }
+  return txt;
+}
+function roleReading(scores, roleKey, name){
+  const w = ROLE_WEIGHTS[roleKey], info = ROLE_INFO[roleKey];
+  const demand = Object.entries(w).sort((a,b)=>b[1]-a[1]).slice(0,2).map(([k])=>k);
+  const parts = demand.map(k=>`${PROFILE_INFO[k].name} (${LEVEL_LABEL[factorLevel(scores[k])].toLowerCase()} no perfil, ${scores[k]}%)`);
+  const gaps = demand.filter(k=>factorLevel(scores[k])==='baixo');
+  let t = `A função de ${info.name} (${info.full}) exige principalmente ${parts.join(' e ')}. ${info.why}`;
+  if(gaps.length) t += ` Ponto de atenção: ${gaps.map(k=>PROFILE_INFO[k].name).join(' e ')} aparece em nível baixo, o que pede apoio de processo ou desenvolvimento específico para sustentar o desempenho.`;
+  return t;
+}
 function buildFallbackReport(result){
   const scores = result.scores;
   const adaptado = result.scoresAdaptado || result.scores;
-  const [t1] = dominantProfile(scores)[0];
-  const [t2] = dominantProfile(scores)[1];
+  const ranked = dominantProfile(scores);
+  const [t1,v1] = ranked[0], [t2,v2] = ranked[1], [t4,v4] = ranked[3];
   const roleRanked = computeRoleFit(scores);
-  const topRole = ROLE_INFO[roleRanked[0][0]];
+  const topKey = roleRanked[0][0], topRole = ROLE_INFO[topKey];
+  const secRole = ROLE_INFO[roleRanked[1][0]];
   const p1 = PROFILE_INFO[t1], p2 = PROFILE_INFO[t2];
+  const first = firstName(result.name);
+  const combo = COMBOS[t1+t2];
+  const adapt = computeAdaptation(scores, adaptado);
+  const intensidade = v1>=45 ? ', em intensidade bastante acentuada' : (v1-v2<4 ? ', em nível muito próximo ao do segundo fator' : '');
+
+  // Risco de desengajamento: combina esforço adaptativo e aderência à função
+  let riscoPts = 0; const motivosRisco = [];
+  if(adapt.nivel==='Alta'){ riscoPts+=2; motivosRisco.push('alto esforço de adaptação entre o natural e o trabalho'); }
+  else if(adapt.nivel==='Moderada'){ riscoPts+=1; motivosRisco.push('ajustes moderados de comportamento no trabalho'); }
+  if(roleRanked[0][1]<30){ riscoPts+=1; motivosRisco.push('aderência apenas moderada à função sugerida'); }
+  const nivelRisco = riscoPts>=2 ? 'Alto' : (riscoPts===1 ? 'Médio' : 'Baixo');
+
+  const pdiPlano = [
+    Object.assign({prazo:'30 dias'}, PDI_ALTO[t1]),
+    Object.assign({prazo:'60 dias'}, factorLevel(v4)==='baixo' ? PDI_BAIXO[t4] : PDI_ALTO[t2]),
+  ];
+  const roleDemand = Object.entries(ROLE_WEIGHTS[topKey]).sort((a,b)=>b[1]-a[1]).map(([k])=>k).find(k=>factorLevel(scores[k])!=='alto' && k!==t4);
+  if(roleDemand) pdiPlano.push(Object.assign({prazo:'90 dias'}, PDI_BAIXO[roleDemand], {foco: PDI_BAIXO[roleDemand].foco+' (exigência da função)'}));
+  pdiPlano.push({prazo:'Contínuo', foco:'Feedback e acompanhamento', acao:'Reunião mensal de 30 minutos com o gestor para revisar o PDI e ajustar metas comportamentais.', indicador:'Evolução percebida pelo gestor e nova avaliação DISC em 6 meses.'});
+
   return {
-    resumoExecutivo: `${result.name} apresenta um perfil DISC predominantemente ${p1.name.toLowerCase()} (${t1}), com forte traço de ${p2.name.toLowerCase()} (${t2}) em segundo plano. ${p1.desc} Isso indica boa aderência à função de ${topRole.name} (${topRole.full}).`,
-    descricaoPerfil: `${p1.desc} Combinado ao traço de ${p2.name.toLowerCase()}, ${p2.desc.charAt(0).toLowerCase()+p2.desc.slice(1)}`,
-    comunicacao: `Comunicação ${TXT.comunicacao[t1]}, com traços de comunicação ${TXT.comunicacao[t2]}.`,
-    lideranca: `Como líder, tende a ser ${TXT.lideranca[t1]}.`,
-    tomadaDecisao: `Toma decisões de forma ${TXT.decisao[t1]}.`,
-    motivadores: uniq([...TXT.motivadores[t1], ...TXT.motivadores[t2]]).slice(0,4),
-    desmotivadores: uniq([...TXT.desmotivadores[t1], ...TXT.desmotivadores[t2]]).slice(0,3),
-    pontosFortes: uniq([...TXT.forcas[t1], ...TXT.forcas[t2]]).slice(0,4),
-    pontosDesenvolvimento: uniq([...TXT.desenvolvimento[t1], ...TXT.desenvolvimento[t2]]).slice(0,3),
-    comportamentoPressao: `Sob pressão, ${result.name.split(' ')[0]} ${TXT.pressao[t1]}.`,
-    potencialCrescimento: `Apresenta potencial para funções que combinem ${p1.name.toLowerCase()} e ${p2.name.toLowerCase()}, como ${topRole.name} (${topRole.full}) e posições correlatas na esteira comercial.`,
-    riscoDesengajamento: { nivel:'Médio', texto:`O risco de desengajamento aumenta quando faltam motivadores como "${TXT.motivadores[t1][0]}", ou quando o ambiente reúne desmotivadores como "${TXT.desmotivadores[t1][0]}".` },
-    compatibilidadeEquipes: `Complementa-se bem com colegas de perfil oposto ao seu, que tragam equilíbrio às suas tendências naturais.`,
-    compatibilidadeGestao: `Responde melhor a uma liderança que ofereça clareza de expectativas e reconhecimento alinhado ao seu perfil ${p1.name.toLowerCase()}.`,
+    arquetipo: combo.nome,
+    resumoExecutivo: `${result.name} tem como fator predominante a ${p1.name} (${t1} · ${v1}%)${intensidade}, com ${p2.name} (${t2} · ${v2}%) como segundo traço — combinação que caracteriza o arquétipo "${combo.nome}". ${combo.texto} No ambiente de trabalho, a adaptação é ${adapt.nivel.toLowerCase()} (${adapt.indice} p.p.). A maior aderência comercial é para ${topRole.name} (${topRole.full}, ${roleRanked[0][1]}%), seguida de ${secRole.name} (${roleRanked[1][1]}%).`,
+    descricaoPerfil: `${p1.desc} ${FACTOR_READ[t1][factorLevel(v1)]} O traço de ${p2.name.toLowerCase()} acrescenta: ${p2.desc.charAt(0).toLowerCase()+p2.desc.slice(1)} ${combo.comercial}`,
+    comunicacao: `Comunicação ${TXT.comunicacao[t1]} e, em segundo plano, ${TXT.comunicacao[t2]}. ${factorLevel(scores.I)==='baixo' ? 'Tende a ser mais econômica nas palavras e pode precisar investir conscientemente em proximidade.' : (factorLevel(scores.I)==='alto' ? 'Tem facilidade natural para engajar, e o desafio é manter objetividade e registro do que foi combinado.' : 'Equilibra bem conteúdo e relacionamento, ajustando o tom ao interlocutor.')}`,
+    lideranca: `Sua liderança tende a ser ${TXT.lideranca[t1]} e, em segundo plano, ${TXT.lideranca[t2]}. ${t1==='D'||t1==='C' ? 'Precisa cuidar do lado humano da gestão — reconhecimento e escuta — para não ser percebido(a) apenas como cobrador(a).' : 'Precisa cuidar da firmeza na cobrança e da clareza de metas para não ser percebido(a) como permissivo(a).'}`,
+    tomadaDecisao: `Toma decisões de forma ${TXT.decisao[t1]}; o traço de ${p2.name.toLowerCase()} faz com que também considere ${t2==='D'?'a velocidade e o impacto no resultado':t2==='I'?'o efeito sobre as pessoas envolvidas':t2==='S'?'a segurança e a opinião do grupo':'os dados e os riscos envolvidos'}. ${factorLevel(scores.C)==='baixo' ? 'Atenção a decisões tomadas sem checagem suficiente de detalhes.' : (factorLevel(scores.C)==='alto' ? 'Atenção ao risco de adiar decisões simples por excesso de análise.' : '')}`,
+    motivadores: uniq([...TXT.motivadores[t1], ...TXT.motivadores[t2]]).slice(0,5),
+    desmotivadores: uniq([...TXT.desmotivadores[t1], ...TXT.desmotivadores[t2]]).slice(0,4),
+    pontosFortes: uniq([...TXT.forcas[t1], ...TXT.forcas[t2]]).slice(0,5),
+    pontosDesenvolvimento: uniq([...TXT.desenvolvimento[t1], ...TXT.desenvolvimento[t2], ...(factorLevel(v4)==='baixo'?[PDI_BAIXO[t4].foco+': '+PDI_BAIXO[t4].acao.charAt(0).toLowerCase()+PDI_BAIXO[t4].acao.slice(1)]:[])]).slice(0,4),
+    comportamentoPressao: `Sob pressão, ${first} ${TXT.pressao[t1]}. Como segundo movimento, ${TXT.pressao[t2]}. ${REEQUILIBRIO[t1]}`,
+    potencialCrescimento: `Tem potencial para crescer em funções que valorizem ${p1.name.toLowerCase()} e ${p2.name.toLowerCase()}, como ${topRole.name} e ${secRole.name}. ${roleRanked.find(([k])=>k==='GESTAO')[1]>=30 ? 'O perfil também mostra base para assumir responsabilidades de gestão no médio prazo, com desenvolvimento em liderança de pessoas.' : 'Para funções de gestão, precisará desenvolver mais firmeza decisória e leitura de indicadores.'}`,
+    riscoDesengajamento: { nivel:nivelRisco, texto: `${motivosRisco.length ? 'Fatores de atenção: '+motivosRisco.join('; ')+'. ' : 'Não há sinais relevantes de desgaste adaptativo no momento. '}O engajamento tende a cair quando faltam motivadores como "${TXT.motivadores[t1][0].replace(/\.$/,'')}", ou quando o ambiente reúne desmotivadores como "${TXT.desmotivadores[t1][0].replace(/\.$/,'')}".` },
+    compatibilidadeEquipes: EQUIPE[t1],
+    compatibilidadeGestao: `Responde melhor a uma liderança que ofereça ${GESTOR[t1].reconhecimento.charAt(0).toLowerCase()+GESTOR[t1].reconhecimento.slice(1).replace(/\.$/,'')}. Tende a ter mais atrito com ${ATRITO_GESTAO[t1]}.`,
     vantagensDesvantagens: {
       vantagens: uniq([...VANTAGENS[t1], ...VANTAGENS[t2].slice(0,1)]).slice(0,4),
       desvantagens: uniq([...DESVANTAGENS[t1], ...DESVANTAGENS[t2].slice(0,1)]).slice(0,4)
     },
     valoresPessoais: {
-      texto: `Seus valores centrais giram em torno de ${TXT.valores[t1].join(' e ')}, refletindo diretamente seu perfil ${p1.name.toLowerCase()}.`,
+      texto: `Seus valores centrais giram em torno de ${TXT.valores[t1].join(' e ')}, reforçados por ${TXT.valores[t2].join(' e ').toLowerCase()}. Ambientes que honram esses valores tendem a gerar mais comprometimento e permanência.`,
       predominantes: uniq([...TXT.valores[t1], ...TXT.valores[t2]]).slice(0,4),
-      secundarios: uniq([...TXT.valores[dominantProfile(scores)[2][0]], ...TXT.valores[dominantProfile(scores)[3][0]]]).slice(0,3)
+      secundarios: uniq([...TXT.valores[ranked[2][0]], ...TXT.valores[t4]]).slice(0,3)
     },
     ancorasCarreira: uniq([TXT.ancoras[t1], TXT.ancoras[t2]]),
-    conflitosValores: `Pode haver desconforto em ambientes que contrariem sua necessidade de ${TXT.valores[t1][0].toLowerCase()}.`,
-    pdi: uniq([...TXT.desenvolvimento[t1], ...TXT.desenvolvimento[t2], 'Buscar feedback contínuo sobre pontos de desenvolvimento']).slice(0,4),
-    conclusaoExecutiva: `${result.name} tem potencial para gerar valor em funções comerciais alinhadas ao perfil ${p1.name.toLowerCase()}/${p2.name.toLowerCase()}, especialmente como ${topRole.name}. O acompanhamento próximo de sua liderança potencializa esse resultado.`,
+    conflitosValores: `Pode haver desconforto em ambientes que contrariem sua necessidade de ${TXT.valores[t1][0].toLowerCase()} — por exemplo, ${TXT.desmotivadores[t1][0].charAt(0).toLowerCase()+TXT.desmotivadores[t1][0].slice(1).replace(/\.$/,'')}. Também pode haver atrito com colegas de perfil ${PROFILE_INFO[OPPOSITE[t1]].name.toLowerCase()} acentuado, se as diferenças de ritmo não forem conversadas.`,
+    pdi: pdiPlano.map(p=>`${p.foco}: ${p.acao}`),
+    pdiPlano,
+    conclusaoExecutiva: `${result.name} reúne características do arquétipo "${combo.nome}" e tem maior potencial de contribuição como ${topRole.name}, com ${secRole.name} como alternativa. Para potencializar o resultado, recomenda-se: alocar em ambiente com ${AMBIENTE[t1].slice(0,2).join(' e ').toLowerCase()}; acompanhar de perto o PDI nos próximos 90 dias; e ${adapt.nivel==='Alta' ? 'revisar o alinhamento entre função e perfil natural, dado o alto esforço adaptativo' : 'manter a avaliação periódica para monitorar a evolução do perfil'}.`,
     analiseGap: buildGapAnalysis(scores, adaptado, result.name)
   };
+}
+// Mantém textos da IA quando existirem; o restante vem sempre do motor atual (mais completo)
+function getReport(r){
+  const base = buildFallbackReport(r);
+  if(r.reportEnhanced && r.report){
+    const ai = Object.assign({}, r.report);
+    delete ai.pdi; delete ai.pdiPlano; delete ai.arquetipo;
+    return Object.assign(base, ai);
+  }
+  return base;
 }
 
 function sanitizeAIReport(p){
@@ -660,10 +872,12 @@ function buildReportPrompt(result, roleRanked, discRanked){
   const topRoleFull = ROLE_INFO[roleRanked[0][0]].full;
   return `Você é um analista de perfil comportamental sênior. Gere um relatório executivo em português do Brasil, tom profissional e caloroso, para ${result.name}, com base no perfil DISC abaixo. Responda APENAS com um objeto JSON válido, sem markdown, sem crases, sem texto antes ou depois.
 
-Seja contextualizado, não genérico: cada campo de texto deve ter até 2 frases; cada item de lista deve ser uma frase curta e específica (até 16 palavras) que explique o porquê prático daquele ponto, não apenas um rótulo solto. Em "vantagensDesvantagens", explique especificamente como o perfil ajuda (vantagem) ou pode atrapalhar (desvantagem) no dia a dia da função de ${topRoleFull}.
+Seja contextualizado, não genérico: cada campo de texto deve ter de 3 a 4 frases, citando os percentuais e a interação entre os fatores (predominante, secundário e o menos expressivo); cada item de lista deve ser uma frase específica (até 22 palavras) que explique o porquê prático daquele ponto, não apenas um rótulo solto. Em "vantagensDesvantagens", explique especificamente como o perfil ajuda (vantagem) ou pode atrapalhar (desvantagem) no dia a dia da função de ${topRoleFull}.
 
 Perfil DISC Natural (percentuais): ${discText}
 Perfil DISC Adaptado, no ambiente de trabalho (percentuais): ${adaptadoText}
+Arquétipo comportamental identificado: ${COMBOS[discRanked[0][0]+discRanked[1][0]].nome}
+Índice de adaptação (soma das diferenças Natural x Adaptado / 2): ${computeAdaptation(result.scores, adaptado).indice} p.p.
 Funções comerciais mais aderentes ao perfil: ${roleText}
 
 Retorne exatamente este formato JSON (preencha todos os campos, "analiseGap" deve comparar o perfil Natural e o Adaptado):
@@ -680,7 +894,7 @@ async function enhanceReportWithAI(result){
     const resp = await fetch("https://api.anthropic.com/v1/messages", {
       method:"POST",
       headers:{"Content-Type":"application/json"},
-      body: JSON.stringify({ model:"claude-sonnet-4-6", max_tokens:1000, messages:[{role:"user", content:prompt}] })
+      body: JSON.stringify({ model:"claude-sonnet-4-6", max_tokens:4000, messages:[{role:"user", content:prompt}] })
     });
     if(!resp.ok) throw new Error('Falha na requisição: '+resp.status);
     const data = await resp.json();
@@ -975,43 +1189,84 @@ function donutSVG(scores, size=200){
   }).join('');
   return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">${circles}</svg>`;
 }
-function radarSVG(scores, scoresAdaptado, size=220){
-  const R=78, cx=size/2, cy=size/2;
+function radarSVG(scores, scoresAdaptado, size=520){
+  const R=size*0.33, cx=size/2, cy=size/2;
+  const keys=['D','I','S','C'];
+  // escala dinâmica: como os 4 fatores somam 100%, usar 0–100% deixaria o gráfico pequeno demais
+  const allVals = keys.map(k=>scores[k]).concat(scoresAdaptado? keys.map(k=>scoresAdaptado[k]) : []);
+  const MAX = Math.min(100, Math.max(40, Math.ceil((Math.max(...allVals)+5)/10)*10));
+  const sc = v => R*v/MAX;
   const angles = {D:-90, I:0, S:90, C:180};
+  const F='font-family="Inter, sans-serif"';
   function pt(angleDeg, r){
     const rad = angleDeg*Math.PI/180;
     return [cx + r*Math.cos(rad), cy + r*Math.sin(rad)];
   }
-  const levels=[20,40,60,80,100];
+  const step = MAX<=60 ? 5 : 10;
+  const levels=[]; for(let v=step; v<=MAX; v+=step) levels.push(v);
   const gridPolys = levels.map(lv=>{
-    const r = R*lv/100;
-    const pts = ['D','I','S','C'].map(k=>pt(angles[k], r).join(',')).join(' ');
-    return `<polygon points="${pts}" fill="none" stroke="#E5DBC6" stroke-width="1"/>`;
+    const r = sc(lv);
+    const pts = keys.map(k=>pt(angles[k], r).join(',')).join(' ');
+    const major = lv%(step*2)===0 || lv===MAX;
+    return `<polygon points="${pts}" fill="${lv===MAX?'rgba(229,219,198,0.18)':'none'}" stroke="#E5DBC6" stroke-width="${major?1.2:0.6}" ${major?'':'stroke-dasharray="2 3"'}/>`;
   }).join('');
-  const axisLines = ['D','I','S','C'].map(k=>{
+  const levelLabels = levels.filter(lv=>lv%(step*2)===0 || lv===MAX).map(lv=>{
+    const [x,y]=pt(-45, sc(lv)/Math.SQRT2*1.0);
+    return `<text x="${x+4}" y="${y-4}" font-size="10.5" font-weight="600" fill="#9A8C74" ${F}>${lv}%</text>`;
+  }).join('');
+  const axisLines = keys.map(k=>{
     const [x,y]=pt(angles[k], R);
-    return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#E5DBC6" stroke-width="1"/>`;
+    return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#D9CCB0" stroke-width="1.2"/>`;
   }).join('');
-  function polygonFor(sc){ return ['D','I','S','C'].map(k=> pt(angles[k], R*sc[k]/100).join(',')).join(' '); }
-  const naturalPolygon = `<polygon points="${polygonFor(scores)}" fill="rgba(74,20,32,0.16)" stroke="#4A1420" stroke-width="2.5" stroke-linejoin="round"/>`;
-  let adaptadoPolygon = '';
-  let adaptadoDots = '';
+  function polygonFor(o){ return keys.map(k=> pt(angles[k], sc(o[k])).join(',')).join(' '); }
+  const naturalPolygon = `<polygon points="${polygonFor(scores)}" fill="rgba(74,20,32,0.18)" stroke="#4A1420" stroke-width="3" stroke-linejoin="round"/>`;
+  let adaptadoPolygon = '', adaptadoDots = '';
+  // deslocamento dos rótulos de valor para não sobrepor (perpendicular ao eixo)
+  const off = {D:[1,0], I:[0,1], S:[1,0], C:[0,1]};
   if(scoresAdaptado){
-    adaptadoPolygon = `<polygon points="${polygonFor(scoresAdaptado)}" fill="rgba(201,162,39,0.10)" stroke="#C9A227" stroke-width="2.5" stroke-dasharray="5 4" stroke-linejoin="round"/>`;
-    adaptadoDots = ['D','I','S','C'].map(k=>{
-      const [x,y]=pt(angles[k], R*scoresAdaptado[k]/100);
-      return `<circle cx="${x}" cy="${y}" r="3.5" fill="#C9A227"/>`;
+    adaptadoPolygon = `<polygon points="${polygonFor(scoresAdaptado)}" fill="rgba(43,123,214,0.12)" stroke="${ADAPT_COLOR}" stroke-width="3" stroke-dasharray="7 5" stroke-linejoin="round"/>`;
+    adaptadoDots = keys.map(k=>{
+      const [x,y]=pt(angles[k], sc(scoresAdaptado[k]));
+      const [ox,oy]=off[k];
+      return `<g><title>${PROFILE_INFO[k].name} · Adaptado: ${scoresAdaptado[k]}%</title>
+        <circle cx="${x}" cy="${y}" r="6" fill="#fff" stroke="${ADAPT_COLOR}" stroke-width="3"/></g>`;
     }).join('');
   }
-  const dots = ['D','I','S','C'].map(k=>{
-    const [x,y]=pt(angles[k], R*scores[k]/100);
-    return `<circle cx="${x}" cy="${y}" r="4" fill="${PROFILE_INFO[k].hex}"/>`;
+  const dots = keys.map(k=>{
+    const [x,y]=pt(angles[k], sc(scores[k]));
+    const [ox,oy]=off[k];
+    return `<g><title>${PROFILE_INFO[k].name} · Natural: ${scores[k]}%</title>
+      <circle cx="${x}" cy="${y}" r="7" fill="${PROFILE_INFO[k].hex}" stroke="#fff" stroke-width="2.5"/></g>`;
   }).join('');
-  const labels = ['D','I','S','C'].map(k=>{
-    const [x,y]=pt(angles[k], R+18);
-    return `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="800" fill="${PROFILE_INFO[k].hex}" font-family="Inter, sans-serif">${k}</text>`;
+  const labels = keys.map(k=>{
+    const [x,y]=pt(angles[k], R+40);
+    const anchor = k==='I'?'start':(k==='C'?'end':'middle');
+    const lx = k==='I'? x-26 : (k==='C'? x+26 : x);
+    const ad = scoresAdaptado ? ` · A ${scoresAdaptado[k]}%` : '';
+    return `<text x="${lx}" y="${y-8}" text-anchor="${anchor}" dominant-baseline="middle" font-size="20" font-weight="900" fill="${PROFILE_INFO[k].hex}" ${F}>${k} <tspan font-size="14" font-weight="700">${PROFILE_INFO[k].name}</tspan></text>
+      <text x="${lx}" y="${y+12}" text-anchor="${anchor}" dominant-baseline="middle" font-size="12" font-weight="600" fill="#7A6E5A" ${F}>N ${scores[k]}%${ad}</text>`;
   }).join('');
-  return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">${gridPolys}${axisLines}${adaptadoPolygon}${naturalPolygon}${dots}${adaptadoDots}${labels}</svg>`;
+  return `<svg class="radar-svg" viewBox="0 0 ${size} ${size}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Radar DISC: perfil natural e adaptado">${gridPolys}${axisLines}${levelLabels}${adaptadoPolygon}${naturalPolygon}${adaptadoDots}${dots}${labels}</svg>`;
+}
+function radarDetailTable(scores, adaptado){
+  const ranked = dominantProfile(scores).map(([k])=>k);
+  const rows = ranked.map((k,i)=>{
+    const n=scores[k], a=adaptado[k], d=Math.round((a-n)*10)/10;
+    const arrow = d>0?'▲':(d<0?'▼':'●');
+    const dcol = d>0?'#2C6B34':(d<0?'#9B2C2C':'#7A6E5A');
+    const nivel = LEVEL_LABEL[factorLevel(n)];
+    return `<tr>
+      <td><span class="rd-rank">${i+1}º</span></td>
+      <td><span class="rd-badge" style="background:${PROFILE_INFO[k].hex}">${k}</span><span class="rd-name">${PROFILE_INFO[k].name}</span><div class="rd-level">Intensidade natural: ${nivel}</div></td>
+      <td class="rd-num">${n}%<div class="rd-mini"><span style="width:${n}%; background:${PROFILE_INFO[k].hex}"></span></div></td>
+      <td class="rd-num">${a}%<div class="rd-mini"><span style="width:${a}%; background:${PROFILE_INFO[k].hex}; opacity:.55"></span></div></td>
+      <td class="rd-num" style="color:${dcol}">${arrow} ${d>0?'+':''}${d} p.p.</td>
+    </tr>`;
+  }).join('');
+  return `<table class="radar-detail">
+    <thead><tr><th></th><th>Fator</th><th>Natural</th><th>Adaptado</th><th>Variação</th></tr></thead>
+    <tbody>${rows}</tbody></table>
+    <p class="rd-note"><b>Natural:</b> como a pessoa age espontaneamente. <b>Adaptado:</b> como ajusta o comportamento no trabalho. A variação mostra quanto cada fator aumenta (▲) ou diminui (▼) nessa adaptação.</p>`;
 }
 function buildReportText(result){
   const roleRanked = computeRoleFit(result.scores);
@@ -1019,14 +1274,34 @@ function buildReportText(result){
   const adaptado = result.scoresAdaptado || result.scores;
   const discLines = dominantProfile(result.scores).map(([k,v])=>`${PROFILE_INFO[k].name} (${k}): Natural ${v}% · Adaptado ${adaptado[k]}%`).join('\n');
   const topInfo = ROLE_INFO[roleRanked[0][0]];
-  const rep = result.report || buildFallbackReport(result);
+  const rep = getReport(result);
+  const adapt = computeAdaptation(result.scores, adaptado);
   return `Relatório de Identificação de Perfil Comercial
 
 Nome: ${result.name}${result.company? '\nEmpresa: '+result.company : ''}
 Data: ${fmtDate(result.date)}
 
+ARQUÉTIPO: ${rep.arquetipo || ''}
+Índice de adaptação: ${adapt.indice} p.p. (${adapt.nivel})
+Risco de desengajamento: ${(rep.riscoDesengajamento||{}).nivel || ''}
+
 RESUMO EXECUTIVO
 ${rep.resumoExecutivo || ''}
+
+DESCRIÇÃO DO PERFIL
+${rep.descricaoPerfil || ''}
+
+COMUNICAÇÃO
+${rep.comunicacao || ''}
+
+LIDERANÇA
+${rep.lideranca || ''}
+
+TOMADA DE DECISÃO
+${rep.tomadaDecisao || ''}
+
+COMPORTAMENTO SOB PRESSÃO
+${rep.comportamentoPressao || ''}
 
 ADERÊNCIA POR FUNÇÃO COMERCIAL
 ${roleLines}
@@ -1037,6 +1312,15 @@ PERFIL COMPORTAMENTAL DISC (Natural x Adaptado no trabalho)
 ${discLines}
 
 ${rep.analiseGap || buildGapAnalysis(result.scores, adaptado, result.name)}
+
+LEITURA DA FUNÇÃO
+${roleReading(result.scores, roleRanked[0][0], result.name)}
+
+MOTIVADORES
+${(rep.motivadores||[]).map(x=>'- '+x).join('\n')}
+
+DESMOTIVADORES
+${(rep.desmotivadores||[]).map(x=>'- '+x).join('\n')}
 
 PONTOS FORTES
 ${(rep.pontosFortes||[]).map(x=>'- '+x).join('\n')}
@@ -1051,7 +1335,11 @@ Desvantagens:
 ${((rep.vantagensDesvantagens&&rep.vantagensDesvantagens.desvantagens)||[]).map(x=>'- '+x).join('\n')}
 
 PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI)
-${(rep.pdi||[]).map((x,i)=>(i+1)+'. '+x).join('\n')}
+${(rep.pdiPlano||[]).map((x,i)=>(i+1)+'. '+x.foco+' ('+x.prazo+')\n   Ação: '+x.acao+'\n   Como medir: '+x.indicador).join('\n')}
+
+RECOMENDAÇÕES PARA A GESTÃO
+${rep.compatibilidadeGestao || ''}
+${rep.compatibilidadeEquipes || ''}
 
 CONCLUSÃO
 ${rep.conclusaoExecutiva || ''}
@@ -1425,11 +1713,13 @@ function renderQuizTransition(){
 function renderResults(){
   const r = state.results.find(x=>x.id===state.lastResultId) || myResults()[0];
   if(!r) return `<div class="page container"><div class="card empty-state"><h3>Nenhum resultado</h3></div></div>`;
-  const rep = r.report || buildFallbackReport(r);
+  const rep = getReport(r);
   const adaptado = r.scoresAdaptado || r.scores;
+  const adapt = computeAdaptation(r.scores, adaptado);
+  const fn = firstName(r.name);
   const roleRanked = computeRoleFit(r.scores);
   const discRanked = dominantProfile(r.scores);
-  const [t1] = discRanked[0], [t2] = discRanked[1];
+  const [t1] = discRanked[0], [t2] = discRanked[1], [t4] = discRanked[3];
   const p1 = PROFILE_INFO[t1], p2 = PROFILE_INFO[t2];
   const risk = rep.riscoDesengajamento || {nivel:'Médio', texto:''};
   const riskCls = risk.nivel==='Baixo'?'risk-baixo':risk.nivel==='Alto'?'risk-alto':'risk-medio';
@@ -1465,21 +1755,33 @@ function renderResults(){
         </div>
       </div>
 
-      <div class="card report-section">
-        <h3>Resumo Executivo</h3>
+            <div class="card report-section report-hero">
+        <div class="eyebrow" style="margin-bottom:6px;">Arquétipo comportamental</div>
+        <h3 class="archetype-name">${rep.arquetipo || ''}</h3>
         <p>${rep.resumoExecutivo}</p>
+        <div class="kpi-row">
+          <div class="kpi"><div class="kpi-lbl">Fator predominante</div><div class="kpi-val" style="color:${p1.hex}">${p1.name} · ${r.scores[t1]}%</div></div>
+          <div class="kpi"><div class="kpi-lbl">Índice de adaptação</div><div class="kpi-val">${adapt.indice} p.p. <span class="kpi-tag">${adapt.nivel}</span></div></div>
+          <div class="kpi"><div class="kpi-lbl">Função mais aderente</div><div class="kpi-val">${ROLE_INFO[roleRanked[0][0]].name} · ${roleRanked[0][1]}%</div></div>
+          <div class="kpi"><div class="kpi-lbl">Risco de desengajamento</div><div class="kpi-val"><span class="risk-pill ${riskCls}" style="margin:0">${risk.nivel}</span></div></div>
+        </div>
       </div>
 
-      <div class="two-col-grid">
-        <div class="card radar-card">
-          <div class="section-title" style="margin-bottom:14px;">Radar Comportamental</div>
-          ${radarSVG(r.scores, adaptado)}
-          <div class="radar-legend">
-            <div class="radar-legend-item"><span class="radar-legend-dot" style="background:#4A1420"></span>Natural</div>
-            <div class="radar-legend-item"><span class="radar-legend-dot" style="background:#C9A227"></span>Adaptado (trabalho)</div>
+      <div class="card radar-card radar-card-lg">
+        <div class="section-title" style="margin-bottom:6px;">Radar Comportamental</div>
+        <p class="radar-sub">Comparativo entre o perfil natural e o perfil adaptado ao ambiente de trabalho</p>
+        <div class="radar-layout">
+          <div class="radar-chart-wrap">
+            ${radarSVG(r.scores, adaptado)}
+            <div class="radar-legend">
+              <div class="radar-legend-item"><span class="radar-legend-line" style="border-color:#4A1420"></span>Natural</div>
+              <div class="radar-legend-item"><span class="radar-legend-line dashed" style="border-color:${ADAPT_COLOR}"></span>Adaptado (trabalho)</div>
+            </div>
           </div>
+          <div class="radar-detail-wrap">${radarDetailTable(r.scores, adaptado)}</div>
         </div>
-        <div class="card full-breakdown">
+      </div>
+      <div class="card full-breakdown">
           <div class="section-title" style="margin-bottom:16px;">Distribuição Comportamental</div>
           ${['D','I','S','C'].map(k=>`
             <div style="margin-bottom:14px;">
@@ -1495,6 +1797,20 @@ function renderResults(){
                 <div class="breakdown-pct" style="font-size:12.5px;">${adaptado[k]}%</div>
               </div>
             </div>`).join('')}
+        </div>
+
+      <div class="card report-section">
+        <h3>Leitura Fator a Fator</h3>
+        <p class="section-intro">Como cada dimensão DISC se manifesta em ${fn}, considerando a intensidade natural e o ajuste feito no trabalho.</p>
+        <div class="factor-grid">
+          ${['D','I','S','C'].map(k=>{
+            const lv = factorLevel(r.scores[k]);
+            const d = Math.round((adaptado[k]-r.scores[k])*10)/10;
+            return `<div class="factor-item" style="border-left-color:${PROFILE_INFO[k].hex}">
+              <div class="factor-head"><span class="rd-badge" style="background:${PROFILE_INFO[k].hex}">${k}</span><b>${PROFILE_INFO[k].name}</b><span class="lvl-pill lvl-${lv}">${LEVEL_LABEL[lv]} · ${r.scores[k]}%</span></div>
+              <p>${FACTOR_READ[k][lv]}</p>
+              ${Math.abs(d)>=5 ? `<p class="factor-gap">No trabalho: ${d>0?'▲ sobe':'▼ cai'} para ${adaptado[k]}% — ${GAP_MEANING[k][d>0?'up':'down']}.</p>` : `<p class="factor-gap muted">No trabalho: praticamente estável (${adaptado[k]}%).</p>`}
+            </div>`;}).join('')}
         </div>
       </div>
 
@@ -1521,6 +1837,31 @@ function renderResults(){
       <div class="card report-section">
         <h3 style="font-size:16px;">Tomada de decisão</h3>
         <p>${rep.tomadaDecisao}</p>
+      </div>
+
+      <div class="card report-section">
+        <h3>Como se Comunicar com ${fn}</h3>
+        <div class="two-col-grid">
+          <div>
+            <div class="chip-group-label" style="color:#2C6B34;">✓ Faça</div>
+            <ul class="report-list">${COMUNICAR[t1].fazer.concat(COMUNICAR[t2].fazer.slice(0,1)).map(x=>`<li>${x}</li>`).join('')}</ul>
+          </div>
+          <div>
+            <div class="chip-group-label" style="color:#9B2C2C;">✕ Evite</div>
+            <ul class="report-list">${COMUNICAR[t1].evitar.concat(COMUNICAR[t2].evitar.slice(0,1)).map(x=>`<li>${x}</li>`).join('')}</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-col-grid">
+        <div class="card report-section">
+          <h3 style="font-size:16px;">Ambiente Ideal de Trabalho</h3>
+          <ul class="report-list">${uniq(AMBIENTE[t1].concat(AMBIENTE[t2].slice(0,2))).map(x=>`<li>${x}</li>`).join('')}</ul>
+        </div>
+        <div class="card report-section">
+          <h3 style="font-size:16px;">Ponto de Atenção: ${PROFILE_INFO[t4].name} (${r.scores[t4]}%)</h3>
+          <p>${factorLevel(r.scores[t4])==='baixo' ? PONTO_CEGO[t4] : `Nenhum fator aparece em nível baixo — o perfil é relativamente equilibrado. O fator menos expressivo é ${PROFILE_INFO[t4].name.toLowerCase()}: ${FACTOR_READ[t4].moderado.charAt(0).toLowerCase()+FACTOR_READ[t4].moderado.slice(1)}`}</p>
+        </div>
       </div>
 
       <div class="two-col-grid">
@@ -1588,6 +1929,16 @@ function renderResults(){
       </div>
 
       <div class="card report-section">
+        <h3>Recomendações para a Gestão de ${fn}</h3>
+        <div class="reco-grid">
+          <div class="reco"><div class="chip-group-label">Feedback</div><p>${GESTOR[t1].feedback}</p></div>
+          <div class="reco"><div class="chip-group-label">Reconhecimento</div><p>${GESTOR[t1].reconhecimento}</p></div>
+          <div class="reco"><div class="chip-group-label">Delegação</div><p>${GESTOR[t1].delegacao}</p></div>
+          <div class="reco"><div class="chip-group-label">Integração ao time</div><p>Nos primeiros 90 dias, priorizar ${AMBIENTE[t1][0].toLowerCase()} e ${AMBIENTE[t2][0].toLowerCase()}; alinhar desde o início o que se espera em ${PROFILE_INFO[t4].name.toLowerCase()}, o fator menos expressivo do perfil.</p></div>
+        </div>
+      </div>
+
+      <div class="card report-section">
         <h3>Valores Pessoais</h3>
         <p>${values.texto}</p>
         ${values.predominantes.length ? `<div class="chip-group-label">Valores predominantes</div>${values.predominantes.map(v=>`<span class="value-chip predominante">${v}</span>`).join('')}` : ''}
@@ -1607,6 +1958,7 @@ function renderResults(){
 
       <div class="card report-section">
         <h3>Funções Comerciais — Compatibilidade</h3>
+        <p class="section-intro" style="margin-bottom:8px;">${roleReading(r.scores, roleRanked[0][0], r.name)}</p>
         ${roleRanked.map(([k,v],idx)=>{
           const lbl = roleLabel(v);
           const info = ROLE_INFO[k];
@@ -1618,7 +1970,7 @@ function renderResults(){
               <div class="cargo-desc">${info.tagline}</div>
             </div>
             <div class="cargo-metric">
-              <div class="cargo-track"><div class="cargo-fill" style="width:${v}%; background:${info.hex}"></div></div>
+              <div class="cargo-track"><div class="cargo-fill" style="width:${Math.min(100, v*2)}%; background:${info.hex}"></div></div>
               <div class="cargo-pct">${v}%</div>
               <span class="qual-badge ${lbl.cls}">${lbl.text}</span>
             </div>
@@ -1628,14 +1980,21 @@ function renderResults(){
 
       <div class="card report-section">
         <h3>Plano de Desenvolvimento Individual (PDI)</h3>
-        <div class="pdi-list">
-          ${(rep.pdi||[]).map((x,i)=>`<div class="pdi-item"><div class="pdi-num">${i+1}</div><div class="pdi-text">${x}</div></div>`).join('')}
-        </div>
+        <p class="section-intro">Plano sugerido para os próximos 90 dias, construído a partir do fator predominante, do fator menos expressivo e das exigências da função de ${ROLE_INFO[roleRanked[0][0]].name}.</p>
+        <div class="pdi-table-wrap"><table class="pdi-table">
+          <thead><tr><th>#</th><th>Foco</th><th>Ação prática</th><th>Prazo</th><th>Como medir</th></tr></thead>
+          <tbody>${(rep.pdiPlano||[]).map((x,i)=>`<tr><td><div class="pdi-num">${i+1}</div></td><td><b>${x.foco}</b></td><td>${x.acao}</td><td class="nowrap">${x.prazo}</td><td>${x.indicador}</td></tr>`).join('')}</tbody>
+        </table></div>
       </div>
 
       <div class="card report-section">
         <h3>Conclusão Executiva</h3>
         <p>${rep.conclusaoExecutiva}</p>
+      </div>
+
+      <div class="card report-section method-note">
+        <h3 style="font-size:15px;">Nota Metodológica</h3>
+        <p>O perfil foi obtido por escolha forçada em 20 blocos de adjetivos, respondidos em duas etapas: como a pessoa é naturalmente (Natural) e como age no trabalho (Adaptado). Os percentuais indicam a proporção de escolhas em cada fator (D, I, S, C) e somam 100%. Intensidade: Alto ≥ 33%, Moderado 18–32%, Baixo &lt; 18%. O índice de adaptação soma as diferenças entre os dois perfis (em pontos percentuais) e estima o esforço de ajuste ao ambiente. A aderência às funções comerciais é uma estimativa ponderada e deve ser usada como apoio — não substitui entrevista, histórico de desempenho e avaliação técnica.</p>
       </div>
 
       <div class="results-actions">
